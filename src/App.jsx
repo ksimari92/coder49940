@@ -1,63 +1,93 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
+import './style.css'
 
 function App() {
 
-  const numeros1 = [1,2,3,4];
-  const numeros2 = [5,6,7,8];
-
-  const numerosTotal = [...numeros1, ...numeros2];
-  const otroArreglo = [...numeros1, 5]
-
-  console.log(otroArreglo);
-
-
-
-  const persona = {
-    nombre: "Karen",
-    apellido: "Simari"
-  }
-
-  const personaConProfesion = {
-    ...persona,
-    profesion: "Programadora"
-  }
-
-  console.log(personaConProfesion)
-
-  //destructuracion
-
-  const {apellido, profesion, nombre} = personaConProfesion;
-
-  console.log(nombre);
-  console.log(apellido);
-  console.log(profesion);
-
   // const numeros1 = [1,2,3,4];
+  // const numeros2 = [5,6,7,8];
 
-  const [num1, num2, num3] = numeros1;
+  // const numerosTotal = [...numeros1, ...numeros2];
+  // const otroArreglo = [...numeros1, 5]
 
+  // // const numeros3 =  [1,2,3,4, 5,6,7,8]
 
-  console.log(num1)
-
-  const arregloMapeado = numeros1.map(num => "Soy el numero " + num);
-
-  console.log(arregloMapeado)
-
-  const mayorA2 = numeros1.filter(num => num > 2);
-
-  console.log(mayorA2);
+  // console.log(otroArreglo);
 
 
 
-  
+  // const persona = {
+  //   nombre: "Karen",
+  //   apellido: "Simari"
+  // }
+
+  // const personaConOtroApellido = {
+  //   ...persona,
+  //   apellido: "Gonzalez"
+  // }
+
+  // console.log(personaConOtroApellido)
+
+  // const personaConProfesion = {
+  //   ...persona,
+  //   profesion: "Programadora"
+  // }
+
+  // console.log(personaConProfesion)
+
+  // //destructuracion
+
+  // const {apellido, profesion, nombre} = personaConProfesion;
+
+  // console.log(nombre);
+  // console.log(apellido);
+  // console.log(profesion);
+
+  //  const numeros1 = [1,2,3,4];
+
+  // // const [num1, num2, num3] = numeros1;
+
+
+  // // console.log(num1)
+
+  // const arregloMapeado = numeros1.map(num => "Soy el numero " + num);
+
+  // console.log(arregloMapeado)
+
+  // arregloMapeado.forEach(posicion => console.log(posicion))
+
+  // const mayorA2 = numeros1.filter(num => num > 2);
+
+  // console.log(mayorA2);
+
+  //SUGAR-SYNTAX
+
+  //   let i = 0;
+  //   // i++
+
+  //   let f = i += 2;
+
+  //   console.log(f);
+
+
+  // let condicion = 5;
+
+  // condicion > 10 ? console.log("La condicion es verdadera") : console.log("La condicion es falsa");
+
+  const styles = {
+    border: "1px solid black",
+    fontSize: 10
+  }
+
 
 
   return (
     <>
-     Hola mundo
+
+      <h1 className='titulo'>Bienvenidos</h1>
+
+      <p style={{ fontSize: 50, color: "blue" }}> Hola mundo</p>
 
     </>
   )
