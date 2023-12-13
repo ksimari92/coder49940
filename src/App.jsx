@@ -2,6 +2,8 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './style.css'
+import Titulo from './components/Titulo'
+import Contador from './components/Contador'
 
 function App() {
 
@@ -83,13 +85,18 @@ function App() {
 
 
   return (
+
     <>
-
-      <h1 className='titulo'>Bienvenidos</h1>
-
-      <p style={{ fontSize: 50, color: "blue" }}> Hola mundo</p>
-
+     {/* <Titulo nombre="Titulo 1" cantidad={25} numero={0} />
+     <Titulo nombre="Titulo 2" cantidad={30} numero={1}/>
+     <Titulo numero={2}/>
+     <Titulo numero={3}/>
+     <Titulo numero={4}/> */}
+     <Contador/>
     </>
+
+
+
   )
 }
 
