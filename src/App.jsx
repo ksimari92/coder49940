@@ -2,97 +2,49 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './style.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Titulo from './components/Titulo'
 import Contador from './components/Contador'
+import NavBar from './components/NavBar'
+import ItemListContainer from './components/ItemListContainer';
 
 function App() {
+  const productos = [
+    { id: 1, nombre: 'Producto A', precio: 20.0 },
+    { id: 2, nombre: 'Producto B', precio: 30.0 },
+    { id: 3, nombre: 'Producto C', precio: 25.0 }
+  ];
 
-  // const numeros1 = [1,2,3,4];
-  // const numeros2 = [5,6,7,8];
+  const detalles = productos.map(producto =>  `${producto.id} - ${producto.nombre} $${producto.precio}`)
+ 
 
-  // const numerosTotal = [...numeros1, ...numeros2];
-  // const otroArreglo = [...numeros1, 5]
+  console.log(detalles)
+  //PROMESAS
+  // const tarea = new Promise ((resolve, reject)=> {
+  //   resolve("Resuelta");
+  // })
 
-  // // const numeros3 =  [1,2,3,4, 5,6,7,8]
-
-  // console.log(otroArreglo);
-
-
-
-  // const persona = {
-  //   nombre: "Karen",
-  //   apellido: "Simari"
-  // }
-
-  // const personaConOtroApellido = {
-  //   ...persona,
-  //   apellido: "Gonzalez"
-  // }
-
-  // console.log(personaConOtroApellido)
-
-  // const personaConProfesion = {
-  //   ...persona,
-  //   profesion: "Programadora"
-  // }
-
-  // console.log(personaConProfesion)
-
-  // //destructuracion
-
-  // const {apellido, profesion, nombre} = personaConProfesion;
-
-  // console.log(nombre);
-  // console.log(apellido);
-  // console.log(profesion);
-
-  //  const numeros1 = [1,2,3,4];
-
-  // // const [num1, num2, num3] = numeros1;
-
-
-  // // console.log(num1)
-
-  // const arregloMapeado = numeros1.map(num => "Soy el numero " + num);
-
-  // console.log(arregloMapeado)
-
-  // arregloMapeado.forEach(posicion => console.log(posicion))
-
-  // const mayorA2 = numeros1.filter(num => num > 2);
-
-  // console.log(mayorA2);
-
-  //SUGAR-SYNTAX
-
-  //   let i = 0;
-  //   // i++
-
-  //   let f = i += 2;
-
-  //   console.log(f);
-
-
-  // let condicion = 5;
-
-  // condicion > 10 ? console.log("La condicion es verdadera") : console.log("La condicion es falsa");
-
-  const styles = {
-    border: "1px solid black",
-    fontSize: 10
-  }
-
+  // tarea.then(result => {
+  //   console.log(result)
+  // }, err => {
+  //     console.log(err)
+  // })
+  // .catch(err => {
+  // console.log("Ha habido un error " + err);
+  // })
+  // .finally(() => {
+  //   console.log("El proceso ha terminado")
+  // })
 
 
   return (
 
     <>
-     {/* <Titulo nombre="Titulo 1" cantidad={25} numero={0} />
-     <Titulo nombre="Titulo 2" cantidad={30} numero={1}/>
-     <Titulo numero={2}/>
-     <Titulo numero={3}/>
-     <Titulo numero={4}/> */}
-     <Contador/>
+     {/* <ul>
+      {productos.map((producto, index) => <li key={index}> {producto.id} - {producto.nombre} {producto.precio}</li>)}
+     </ul> */}
+     <NavBar/>
+     <ItemListContainer productos={productos} greeting="Mensaje de bienvenida!!!"/>
     </>
 
 
