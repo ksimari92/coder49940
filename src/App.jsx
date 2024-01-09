@@ -7,6 +7,10 @@ import Titulo from './components/Titulo'
 import Contador from './components/Contador'
 import NavBar from './components/NavBar'
 import ItemListContainer from './components/ItemListContainer';
+// import { ComponenteConFuncion } from './components/HOC';
+import {ComponenteFuncionalConLogica} from './components/HOC'
+import Container from './components/Container';
+import Counter from './components/Counter';
 
 function App() {
   const productos = [
@@ -43,8 +47,12 @@ function App() {
      {/* <ul>
       {productos.map((producto, index) => <li key={index}> {producto.id} - {producto.nombre} {producto.precio}</li>)}
      </ul> */}
-     <NavBar/>
+     {/* <NavBar/>
      <ItemListContainer productos={productos} greeting="Mensaje de bienvenida!!!"/>
+     {/* <Container/> */}
+     {/* <Counter/>
+     <ComponenteFuncionalConLogica /> */}
+     <Container/>
     </>
 
 
